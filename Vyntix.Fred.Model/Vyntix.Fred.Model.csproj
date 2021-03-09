@@ -16,7 +16,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Leader Analytics LeaderAnalytics Vyntix FRED</PackageTags>
     <PackageReleaseNotes>See Repository</PackageReleaseNotes>
-    <Version>1.0.0.1-beta.1</Version>
+    <Version>1.0.0-beta.1</Version>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <PackageId>LeaderAnalytics.Vyntix.Fred.Model</PackageId>
