@@ -43,6 +43,7 @@ steps:
     packagesToPack: $(project)
     versioningScheme: 'byEnvVar'
     versionEnvVar: 'NugetVersion'
+    includesymbols: true
 
    #nobuild: true
    #versioningScheme: 'off'
@@ -53,3 +54,4 @@ steps:
     feedsToUse: 'select'
     vstsFeed: 'LeaderAnalyticsFeed'
     publishVstsFeed: 'LeaderAnalyticsFeed'
+    includeSymbols: true
