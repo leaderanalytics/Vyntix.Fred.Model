@@ -1,4 +1,4 @@
-[Vyntix](/VyntixLogo.png)
+[Vyntix](/blob/mainVyntixLogo.png)
 
 # LeaderAnalytics.Vyntix.Fred.Model
 
