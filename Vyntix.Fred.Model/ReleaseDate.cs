@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeaderAnalytics.Core.Serialization.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace LeaderAnalytics.Vyntix.Fred.Model
         public int ID { get; set; }
 
         [JsonPropertyName("release_id")]
-        [JsonConverter(typeof(JSONNumberConverter))]
+        [JsonConverter(typeof(NumberToStringConverter))]
         [XmlAttribute("release_id")]
         public string ReleaseID { get; set; }
 

@@ -23,6 +23,15 @@
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <RootNamespace>LeaderAnalytics.Vyntix.Fred.Model</RootNamespace>
+    <AssemblyName>LeaderAnalytics.Vyntix.Fred.Model</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LeaderAnalytics.Core.Serialization" Version="1.0.2" />
+  </ItemGroup>
+  
   <ItemGroup>
     <None Include="..\VyntixLogo.png" Pack="true" PackagePath="\" />
     <None Include="..\LICENSE.md" Pack="true" PackagePath="\" />

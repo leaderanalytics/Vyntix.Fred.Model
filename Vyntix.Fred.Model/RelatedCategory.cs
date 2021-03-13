@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeaderAnalytics.Core.Serialization.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace LeaderAnalytics.Vyntix.Fred.Model
         public string CategoryID { get; set; }
 
         [JsonPropertyName("id")]
-        [JsonConverter(typeof(JSONNumberConverter))]
+        [JsonConverter(typeof(NumberToStringConverter))]
         [XmlAttribute("id")]
         [MaxLength(100)]
         [Required]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeaderAnalytics.Core.Serialization.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -19,14 +20,14 @@ namespace LeaderAnalytics.Vyntix.Fred.Model
         public int ID { get; set; }
                 
         [JsonPropertyName("id")]
-        [JsonConverter(typeof(JSONNumberConverter))]
+        [JsonConverter(typeof(NumberToStringConverter))]
         [XmlAttribute("id")]
         [MaxLength(100)]
         [Required]
         public string NativeID { get; set; }
 
         [JsonPropertyName("parent_id")]
-        [JsonConverter(typeof(JSONNumberConverter))]
+        [JsonConverter(typeof(NumberToStringConverter))]
         [XmlAttribute("parent_id")]
         [MaxLength(100)]
         public string ParentID { get; set; }
