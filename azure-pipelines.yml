@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+- main
 
 pool:
   vmImage: 'windows-latest'
@@ -56,3 +56,9 @@ steps:
     publishVstsFeed: 'LeaderAnalyticsFeed'
     includeSymbols: true
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.snupkg'
+
+- task: PowerShell@2
+  displayName: "Push package to nuget.org"
+  inputs:
+    targetType: 'inline'
+    script: 'nuget push $(Build.ArtifactStagingDirectory)\*.nupkg -ApiKey $(nuget.org_apikey) -Source https://api.nuget.org/v3/index.json'    
