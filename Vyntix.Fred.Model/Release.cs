@@ -7,10 +7,6 @@ public class Release : IRelease
     [XmlIgnore]
     public int ID { get; set; }
 
-    [JsonIgnore]
-    [XmlIgnore]
-    public string SourceNativeID { get; set; }
-
     [JsonPropertyName("id")]
     [JsonConverter(typeof(NumberToStringConverter))]
     [XmlAttribute("id")]
@@ -38,4 +34,8 @@ public class Release : IRelease
     [JsonPropertyName("notes")]
     [XmlAttribute("notes")]
     public string Notes { get; set; }
+
+    [JsonIgnore]
+    [XmlIgnore]
+    public IEnumerable<SourceRelease> SourceReleases { get; set; }
 }

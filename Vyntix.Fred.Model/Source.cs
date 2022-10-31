@@ -26,4 +26,8 @@ public class Source : ISource
     [JsonPropertyName("notes")]
     [XmlAttribute("notes")]
     public string Notes { get; set; }
+
+    [JsonIgnore]
+    [XmlIgnore]
+    public IEnumerable<SourceRelease> SourceReleases { get; set; }
 }

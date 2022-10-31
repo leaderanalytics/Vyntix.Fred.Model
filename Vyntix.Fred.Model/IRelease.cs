@@ -8,5 +8,5 @@ public interface IRelease
     string NativeID { get; set; }
     string Notes { get; set; }
     DateTime RTStart { get; set; }
-    string SourceNativeID { get; set; }
+    IEnumerable<SourceRelease> SourceReleases { get; set; }
 }
