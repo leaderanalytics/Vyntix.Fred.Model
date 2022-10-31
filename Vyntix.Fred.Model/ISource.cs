@@ -6,4 +6,5 @@ public interface ISource
     string Name { get; set; }
     string NativeID { get; set; }
     string Notes { get; set; }
+    IEnumerable<SourceRelease> SourceReleases { get; set; }
 }
