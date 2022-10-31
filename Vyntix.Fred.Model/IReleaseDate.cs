@@ -1,10 +1,7 @@
-﻿using System;
+﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
-namespace LeaderAnalytics.Vyntix.Fred.Model
+public interface IReleaseDate
 {
-    public interface IReleaseDate
-    {
-        DateTime DateReleased { get; set; }
-        string ReleaseID { get; set; }
-    }
+    DateTime DateReleased { get; set; }
+    string ReleaseID { get; set; }
 }

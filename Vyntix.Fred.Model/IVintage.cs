@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
-namespace LeaderAnalytics.Vyntix.Fred.Model
+public interface IVintage
 {
-    public interface IVintage
-    {
-        string Symbol { get; set; }
-        DateTime VintageDate { get; set; }
-        ICollection<IObservation> Observations { get; set; }
-    }
+    string Symbol { get; set; }
+    DateTime VintageDate { get; set; }
+    ICollection<IObservation> Observations { get; set; }
 }

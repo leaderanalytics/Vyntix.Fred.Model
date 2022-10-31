@@ -1,8 +1,7 @@
-﻿namespace LeaderAnalytics.Vyntix.Fred.Model
+﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
+
+public interface IRelatedCategory
 {
-    public interface IRelatedCategory
-    {
-        string CategoryID { get; set; }
-        string RelatedCategoryID { get; set; }
-    }
+    string CategoryID { get; set; }
+    string RelatedCategoryID { get; set; }
 }
