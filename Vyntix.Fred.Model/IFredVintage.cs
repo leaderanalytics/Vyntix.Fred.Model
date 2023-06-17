@@ -1,8 +1,8 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
-public interface IVintage
+public interface IFredVintage
 {
     string Symbol { get; set; }
     DateTime VintageDate { get; set; }
-    ICollection<IObservation> Observations { get; set; }
+    ICollection<IFredObservation> Observations { get; set; }
 }

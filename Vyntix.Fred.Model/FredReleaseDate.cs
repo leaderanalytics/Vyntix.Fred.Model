@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("release_date")]
-public class ReleaseDate : IReleaseDate
+public class FredReleaseDate : IFredReleaseDate
 {
     [JsonIgnore]
     [XmlIgnore]

@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("vintage_date")]
-public class Vintage : IVintage
+public class FredVintage : IFredVintage
 {
     [JsonIgnore]
     [XmlIgnore]
@@ -25,7 +25,7 @@ public class Vintage : IVintage
 
     [JsonIgnore]
     [XmlIgnore]
-    public ICollection<IObservation> Observations { get; set; }
+    public ICollection<IFredObservation> Observations { get; set; }
 
-    public Vintage() => Observations = new List<IObservation>();
+    public FredVintage() => Observations = new List<IFredObservation>();
 }

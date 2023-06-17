@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("series")]
-public partial class Series : ISeries
+public partial class FredSeries : IFredSeries
 {
     [JsonIgnore]
     [XmlIgnore]

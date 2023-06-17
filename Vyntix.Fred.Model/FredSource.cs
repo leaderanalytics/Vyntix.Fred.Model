@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("source")]
-public class Source : ISource
+public class FredSource : IFredSource
 {
     [JsonIgnore]
     [XmlIgnore]
@@ -29,5 +29,5 @@ public class Source : ISource
 
     [JsonIgnore]
     [XmlIgnore]
-    public IEnumerable<SourceRelease> SourceReleases { get; set; }
+    public IEnumerable<FredSourceRelease> SourceReleases { get; set; }
 }

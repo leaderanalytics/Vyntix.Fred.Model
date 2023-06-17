@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("category")]
-public class Category : ICategory
+public class FredCategory : IFredCategory
 {
     [JsonIgnore]
     [XmlIgnore]
@@ -28,26 +28,26 @@ public class Category : ICategory
 
     [JsonPropertyName("seriess")]
     [XmlElement("seriess", IsNullable = true)]
-    public List<Series> Series { get; set; }
+    public List<FredSeries> Series { get; set; }
 
     [JsonIgnore]
     [XmlIgnore]
-    public List<Category> Children { get; set; }
+    public List<FredCategory> Children { get; set; }
 
     [JsonIgnore]
     [XmlIgnore]
-    public List<Category> Related { get; set; }
+    public List<FredCategory> Related { get; set; }
 
     [JsonIgnore]
     [XmlIgnore]
     public List<CategoryTag> CategoryTags { get; set; }
 
 
-    public Category()
+    public FredCategory()
     {
-        Children = new List<Category>();
-        Related = new List<Category>();
-        Series = new List<Series>();
+        Children = new List<FredCategory>();
+        Related = new List<FredCategory>();
+        Series = new List<FredSeries>();
         CategoryTags = new List<CategoryTag>();
     }
 }

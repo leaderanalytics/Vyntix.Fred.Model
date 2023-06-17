@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("release")]
-public class Release : IRelease
+public class FredRelease : IFredRelease
 {
     [JsonIgnore]
     [XmlIgnore]
@@ -37,5 +37,5 @@ public class Release : IRelease
 
     [JsonIgnore]
     [XmlIgnore]
-    public IEnumerable<SourceRelease> SourceReleases { get; set; }
+    public IEnumerable<FredSourceRelease> SourceReleases { get; set; }
 }

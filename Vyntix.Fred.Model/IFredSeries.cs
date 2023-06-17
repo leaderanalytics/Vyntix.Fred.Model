@@ -1,6 +1,6 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
-public interface ISeries
+public interface IFredSeries
 {
     string Frequency { get; set; }
     string LastUpdated { get; set; }
