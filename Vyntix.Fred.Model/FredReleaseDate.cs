@@ -10,6 +10,8 @@ public class FredReleaseDate : IFredReleaseDate
     [JsonPropertyName("release_id")]
     [JsonConverter(typeof(NumberToStringConverter))]
     [XmlAttribute("release_id")]
+    [Required]
+    [MaxLength(100)]
     public string ReleaseID { get; set; }
 
     [JsonIgnore]

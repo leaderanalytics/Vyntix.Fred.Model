@@ -1,6 +1,6 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
-public interface ISeriesTag
+public interface IFredSeriesTag
 {
     DateTime CreatedDate { get; set; }
     string GroupID { get; set; }

@@ -40,7 +40,7 @@ public class FredCategory : IFredCategory
 
     [JsonIgnore]
     [XmlIgnore]
-    public List<CategoryTag> CategoryTags { get; set; }
+    public List<FredCategoryTag> CategoryTags { get; set; }
 
 
     public FredCategory()
@@ -48,6 +48,6 @@ public class FredCategory : IFredCategory
         Children = new List<FredCategory>();
         Related = new List<FredCategory>();
         Series = new List<FredSeries>();
-        CategoryTags = new List<CategoryTag>();
+        CategoryTags = new List<FredCategoryTag>();
     }
 }

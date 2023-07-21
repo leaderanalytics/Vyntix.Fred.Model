@@ -1,6 +1,6 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
-public interface ICategoryTag
+public interface IFredCategoryTag
 {
     string CategoryID { get; set; }
     DateTime CreatedDate { get; set; }

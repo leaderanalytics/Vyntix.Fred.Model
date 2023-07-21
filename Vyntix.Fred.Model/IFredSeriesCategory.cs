@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
-public interface IRelatedCategory
+public interface IFredSeriesCategory
 {
     string CategoryID { get; set; }
-    string RelatedCategoryID { get; set; }
+    string Symbol { get; set; }
 }

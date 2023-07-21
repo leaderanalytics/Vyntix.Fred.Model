@@ -2,7 +2,7 @@
 
 public interface IFredCategory
 {
-    List<CategoryTag> CategoryTags { get; set; }
+    List<FredCategoryTag> CategoryTags { get; set; }
     List<FredCategory> Children { get; set; }
     string Name { get; set; }
     string NativeID { get; set; }

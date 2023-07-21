@@ -10,6 +10,8 @@ public class FredSource : IFredSource
     [JsonPropertyName("id")]
     [JsonConverter(typeof(NumberToStringConverter))]
     [XmlAttribute("id")]
+    [Required]
+    [MaxLength(100)]
     public string NativeID { get; set; }
 
     [JsonPropertyName("name")]
