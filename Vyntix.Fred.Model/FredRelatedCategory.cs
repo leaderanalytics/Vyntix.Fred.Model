@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("category")]
-public class RelatedCategory : IRelatedCategory
+public class FredRelatedCategory : IFredRelatedCategory
 {
     [JsonIgnore]
     [XmlIgnore]

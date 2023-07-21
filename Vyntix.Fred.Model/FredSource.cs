@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
-[XmlType("release")]
-public class Release : IRelease
+[XmlType("source")]
+public class FredSource : IFredSource
 {
     [JsonIgnore]
     [XmlIgnore]
@@ -10,6 +10,8 @@ public class Release : IRelease
     [JsonPropertyName("id")]
     [JsonConverter(typeof(NumberToStringConverter))]
     [XmlAttribute("id")]
+    [Required]
+    [MaxLength(100)]
     public string NativeID { get; set; }
 
     [JsonPropertyName("name")]
@@ -17,14 +19,6 @@ public class Release : IRelease
     [MaxLength(400)]
     [Required]
     public string Name { get; set; }
-
-    [JsonPropertyName("press_release")]
-    [XmlAttribute("press_release")]
-    public bool IsPressRelease { get; set; }
-
-    [JsonPropertyName("realtime_start")]
-    [XmlAttribute("realtime_start")]
-    public DateTime RTStart { get; set; }
 
     [JsonPropertyName("link")]
     [XmlAttribute("link")]
@@ -37,5 +31,5 @@ public class Release : IRelease
 
     [JsonIgnore]
     [XmlIgnore]
-    public IEnumerable<SourceRelease> SourceReleases { get; set; }
+    public IEnumerable<FredSourceRelease> SourceReleases { get; set; }
 }

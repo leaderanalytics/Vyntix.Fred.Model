@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("tag")]
-public class CategoryTag : ICategoryTag
+public class FredSeriesTag : IFredSeriesTag
 {
     [JsonIgnore]
     [XmlIgnore]
@@ -9,25 +9,23 @@ public class CategoryTag : ICategoryTag
 
     [JsonIgnore]
     [XmlIgnore]
-    [MaxLength(100)]
-    [Required]
     public string NativeID { get => Name + GroupID; }
 
     [JsonIgnore]
     [XmlIgnore]
-    [MaxLength(100)]
+    [MaxLength(50)]
     [Required]
-    public string CategoryID { get; set; }
+    public string Symbol { get; set; }
 
     [JsonPropertyName("name")]
     [XmlAttribute("name")]
-    [MaxLength(200)]
+    [MaxLength(400)]
     [Required]
     public string Name { get; set; }
 
     [JsonPropertyName("group_id")]
     [XmlAttribute("group_id")]
-    [MaxLength(100)]
+    [MaxLength(50)]
     [Required]
     public string GroupID { get; set; }
 

@@ -3,7 +3,7 @@
 // There is no Fred API that directly populates this entity.
 // This entity is intended to join multiple categories with multiple series.
 
-public class SeriesCategory : ISeriesCategory
+public class FredSeriesCategory : IFredSeriesCategory
 {
     public int ID { get; set; }
 

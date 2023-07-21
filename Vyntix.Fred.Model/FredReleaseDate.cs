@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("release_date")]
-public class ReleaseDate : IReleaseDate
+public class FredReleaseDate : IFredReleaseDate
 {
     [JsonIgnore]
     [XmlIgnore]
@@ -10,6 +10,8 @@ public class ReleaseDate : IReleaseDate
     [JsonPropertyName("release_id")]
     [JsonConverter(typeof(NumberToStringConverter))]
     [XmlAttribute("release_id")]
+    [Required]
+    [MaxLength(100)]
     public string ReleaseID { get; set; }
 
     [JsonIgnore]

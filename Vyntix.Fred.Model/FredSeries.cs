@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("series")]
-public partial class Series : ISeries
+public partial class FredSeries : IFredSeries
 {
     [JsonIgnore]
     [XmlIgnore]
@@ -9,6 +9,7 @@ public partial class Series : ISeries
 
     [JsonIgnore]
     [XmlIgnore]
+    [MaxLength(50)]
     public string ReleaseID { get; set; }
 
     [JsonPropertyName("id")]

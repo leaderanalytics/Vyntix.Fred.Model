@@ -1,7 +1,7 @@
 ﻿namespace LeaderAnalytics.Vyntix.Fred.Model;
 
 [XmlType("observation")]
-public class Observation : IObservation
+public class FredObservation : IFredObservation
 {
     [XmlIgnore]
     public int ID { get; set; }
@@ -43,5 +43,5 @@ public class Observation : IObservation
 
     [JsonIgnore]
     [XmlIgnore]
-    public IVintage Vintage { get; set; }
+    public IFredVintage Vintage { get; set; }
 }
