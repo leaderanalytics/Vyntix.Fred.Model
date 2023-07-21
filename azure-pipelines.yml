@@ -12,16 +12,31 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  project: '**/Vyntix.Fred.Model.csproj'
+  project: 'Vyntix.Fred.Model/Vyntix.Fred.Model.csproj'
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  major: 1
-  minor: 0
-  patch: $[counter(variables['minor'], 1)] #this will reset when we bump minor
-  NugetVersion: $(major).$(minor).$(patch)-beta.3
 
 steps:
+
+# nbgv need a deep clone
+
+- checkout: self
+  fetchDepth: 0
+
+# install nbgv tooling
+
+- task: DotNetCoreCLI@2  
+  displayName: Install NBGV tool
+  inputs:
+    command: custom
+    custom: tool
+    arguments: install --tool-path . nbgv
+
+# allow nbgv to set the version
+
+- script: nbgv cloud
+  displayName: Set Version
 
 - task: UseDotNet@2
   displayName: 'Use dotnet 7'
@@ -43,16 +58,22 @@ steps:
     projects: $(project)
 
 - task: DotNetCoreCLI@2
-  displayName: "dotnet pack"
+  displayName: 'dotnet pack'
   inputs:
-    command: 'pack'
-    arguments: '--configuration $(buildConfiguration)'
-    packagesToPack: $(project)
-    versioningScheme: 'byEnvVar'
-    versionEnvVar: 'NugetVersion'
-    includesymbols: true
+    command: 'custom'
+    custom: 'pack'
+    arguments: '$(project) /p:PublicRelease=true --no-build --include-symbols --include-source -c=Release -o $(build.artifactstagingdirectory)'
+
+- task: AzureKeyVault@1
+  name: KeyVaultSecrets
+  displayName: Get Nuget API key from Key Vault
+  inputs:
+    azureSubscription: 'All Azure Services'
+    KeyVaultName: 'LeaderAnalyticsVault'
+    SecretsFilter: 'nuget-apikey'
    
 - task: NuGetCommand@2
+  displayName: 'Push package to leaderanalytics feed'
   inputs:
     command: 'push'
     feedsToUse: 'select'
@@ -65,4 +86,4 @@ steps:
   displayName: "Push package to nuget.org"
   inputs:
     targetType: 'inline'
-    script: 'nuget push $(Build.ArtifactStagingDirectory)\*.nupkg -ApiKey $(nuget.org_apikey) -Source https://api.nuget.org/v3/index.json'    
+    script: 'nuget push $(Build.ArtifactStagingDirectory)\*.nupkg -ApiKey $(nuget-apikey) -Source https://api.nuget.org/v3/index.json'    
