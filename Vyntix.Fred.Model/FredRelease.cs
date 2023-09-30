@@ -14,14 +14,6 @@ public class FredRelease : IFredRelease
     [Required]
     public string NativeID { get; set; }
 
-    // This column exists so we can persist NativeID of the related Source.  This column is used when downloaded releases by SourceID.  We need this
-    // column on the Fred_Staging table - when exporting a SourceRelease row will be created on Vyntix because Source/Release reationship is many-to-many.
-    [JsonIgnore]
-    [XmlIgnore]
-    [MaxLength(100)]
-    [Required]
-    public string SourceNativeID { get; set; }
-
     [JsonPropertyName("name")]
     [XmlAttribute("name")]
     [MaxLength(400)]
