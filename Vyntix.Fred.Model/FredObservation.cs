@@ -44,10 +44,4 @@ public class FredObservation : IFredObservation
     [JsonIgnore]
     [XmlIgnore]
     public IFredVintage Vintage { get; set; }
-
-
-    [JsonIgnore]
-    [XmlIgnore]
-    public bool? HasVintages { get; set; }
-
 }

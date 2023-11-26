@@ -55,4 +55,8 @@ public partial class FredSeries : IFredSeries
     [JsonPropertyName("notes")]
     [XmlAttribute("notes")]
     public string Notes { get; set; }
+
+    [JsonIgnore]
+    [XmlIgnore]
+    public bool? HasVintages { get; set; }
 }
