@@ -22,8 +22,7 @@ public class FredObservation : IFredObservation
 
     [JsonPropertyName("value")]
     [XmlAttribute("value")]
-    [MaxLength(50)]
-    public string Value { get; set; }
+    public decimal? Value { get; set; }
 
     [JsonPropertyName("realtime_start")]
     [XmlAttribute("realtime_start")]
