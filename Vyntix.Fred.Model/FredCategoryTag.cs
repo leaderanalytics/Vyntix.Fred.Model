@@ -9,7 +9,6 @@ public class FredCategoryTag : IFredCategoryTag
 
     [JsonIgnore]
     [XmlIgnore]
-    [MaxLength(100)]
     [Required]
     public string NativeID { get => Name + GroupID; }
 

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net9;net8;net7;net6</TargetFrameworks>
+    <TargetFrameworks>net9</TargetFrameworks>
 	<ImplicitUsings>enable</ImplicitUsings>  
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>true</IncludeSymbols>
@@ -32,10 +32,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="LeaderAnalytics.Core.Serialization" Version="3.0.1" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <PackageReference Update="Nerdbank.GitVersioning" Version="3.6.146" />
+    <PackageReference Update="LeaderAnalytics.Core.Serialization" Version="3.0.2" />
+    <PackageReference Update="Nerdbank.GitVersioning" Version="3.7.115" />
   </ItemGroup>
 </Project>
