@@ -20,7 +20,7 @@ public partial class FredSeries : IFredSeries
 
     [JsonPropertyName("title")]
     [XmlAttribute("title")]
-    [MaxLength(400)]
+    [MaxLength(1000)]
     [Required]
     public string Title { get; set; }
 
