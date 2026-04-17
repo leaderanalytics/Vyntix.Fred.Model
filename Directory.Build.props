@@ -3,8 +3,8 @@
   <ItemGroup>
     <PackageReference Include="Nerdbank.GitVersioning" Condition="!Exists('packages.config')">
       <PrivateAssets>all</PrivateAssets>
-      <Version>3.6.133</Version>
+      <Version>3.9.50</Version>
     </PackageReference>
-	  <PackageReference Include="LeaderAnalytics.Core.Serialization" Version="3.0.1" />
+	  <PackageReference Include="LeaderAnalytics.Core.Serialization" Version="4.0.0" />
   </ItemGroup>
 </Project>
